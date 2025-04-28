@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteRule .* /public/$0 [L]
+DirectoryIndex index.php
+
+<FilesMatch "^(\.env|\.env\.example|database.sql|\.htaccess)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
